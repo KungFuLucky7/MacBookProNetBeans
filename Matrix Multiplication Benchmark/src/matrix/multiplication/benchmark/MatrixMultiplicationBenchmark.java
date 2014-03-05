@@ -6,6 +6,7 @@
 package matrix.multiplication.benchmark;
 
 /**
+ * Matrix Multiplication Benchmark
  *
  * @author Terry Wong
  */
