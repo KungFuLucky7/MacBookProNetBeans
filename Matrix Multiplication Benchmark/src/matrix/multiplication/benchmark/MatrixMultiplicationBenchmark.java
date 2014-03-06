@@ -930,7 +930,7 @@ public class MatrixMultiplicationBenchmark {
             mmb.deleteMatrix(n);
         }
 
-        System.out.print(String.format("\n********************************************************************************************************\n"));
+        System.out.print(String.format("\n**********************************************************************************************************\n"));
         Rave = mmb.geometric_mean(R, index);
         Qave = 100 * (Rave - 1) / (Rave + 1);
         System.out.print(String.format("\nRave: %f\tQave: %f%%\n", Rave, Qave));
