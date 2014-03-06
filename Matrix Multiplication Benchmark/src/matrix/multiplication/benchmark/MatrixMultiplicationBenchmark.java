@@ -89,24 +89,22 @@ public class MatrixMultiplicationBenchmark {
 
         MatrixMultiplicationBenchmark mmb = new MatrixMultiplicationBenchmark();
         n = nmin;
-        // Initialize a[][] and b[][] // Typical size from 100*100 to 500*500
-        mmb.allocateMatrix(n);
-
-        // Define arbitrary initial values of matrices a[][] and b[][]
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < n; j++) {
-                a[i][j] = Math.random();
-                b[i][j] = Math.random();
-            }
-        }
-
         R = new double[nmax / nmin];
         index = 0;
         for (n = nmin; n <= nmax; n += step) {
             System.out.print(String.format("==========================================================================================================\n"));
             System.out.print(String.format("n=%-7d\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\n", n, "Tijk", "Tjik", "Tikj", "Tkij", "Tjki", "Tji"));
             System.out.print(String.format("==========================================================================================================\n"));
+            // Initialize a[][] and b[][] // Typical size from 100*100 to 500*500
             mmb.allocateMatrix(n);
+
+            // Define arbitrary initial values of matrices a[][] and b[][]
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < n; j++) {
+                    a[i][j] = Math.random();
+                    b[i][j] = Math.random();
+                }
+            }
             M = (nmax * nmax * nmax) / (n * n * n);
             for (i = 0; i < n; i++) // Matrix [][] initialization
             {
