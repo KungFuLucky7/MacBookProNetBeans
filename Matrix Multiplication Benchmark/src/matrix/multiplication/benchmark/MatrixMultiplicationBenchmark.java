@@ -93,7 +93,7 @@ public class MatrixMultiplicationBenchmark {
         index = 0;
         for (n = nmin; n <= nmax; n += step) {
             System.out.print(String.format("==========================================================================================================\n"));
-            System.out.print(String.format("n=%-7d\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\n", n, "Tijk", "Tjik", "Tikj", "Tkij", "Tjki", "Tji"));
+            System.out.print(String.format("n=%-7d\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\t\t%-7s\n", n, "Tijk", "Tjik", "Tikj", "Tkij", "Tjki", "Tkji"));
             System.out.print(String.format("==========================================================================================================\n"));
             // Initialize a[][] and b[][] // Typical size from 100*100 to 500*500
             mmb.allocateMatrix(n);
